@@ -1,7 +1,10 @@
-import 'package:chatclient/view/home_page.dart';
+import 'package:chatclient/services/local/notification_service.dart';
+import 'package:chatclient/view/chat_page.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await NotificationService().initNotification();
   runApp(MyApp());
 }
 
